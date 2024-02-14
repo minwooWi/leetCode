@@ -1,13 +1,13 @@
 class Solution {
     public boolean isPalindrome(int x) {
-        String intToString = String.valueOf(x);
-        char[] stringArray = intToString.toCharArray();
-        char[] reverseArray = new char[stringArray.length];
+        String intToArray = String.valueOf(x);
+        char[] charArray = intToArray.toCharArray();
+        char[] reverseArray = new char[charArray.length];
         
-        for(int i=stringArray.length-1, j=0; i >= 0; i--, j++){
-            reverseArray[j] = stringArray[i];
+        for(int i=charArray.length-1,j=0; i >=0; i--,j++){
+            reverseArray[j] = charArray[i];
         }
         
-        return Arrays.equals(stringArray, reverseArray);
+        return Arrays.equals(charArray, reverseArray);
     }
 }
